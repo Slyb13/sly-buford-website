@@ -120,10 +120,24 @@
     .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     .books-row { grid-template-columns: 1fr; }
     .press-grid { grid-template-columns: 1fr; }
-    .hero-stats { position: static; padding: 2rem; flex-wrap: wrap; gap: 1.5rem; background: rgba(0,0,0,0.5); }
-    .hero-content { padding: 0 1.25rem 3rem; }
-    .hero h1 { font-size: 2.6rem; }
+    .hero-stats {
+      position: static;
+      display: flex; flex-wrap: wrap; gap: 1.25rem;
+      padding: 1.5rem;
+      background: rgba(0,0,0,0.6);
+      justify-content: flex-start;
+    }
+    .hstat { text-align: left; }
+    .hstat .num { font-size: 1.8rem; }
+    .hero-content { padding: 0 1.5rem 2rem; }
+    .hero h1 { font-size: clamp(2.4rem, 9vw, 3.2rem); }
+    .hero-sub { font-size: 0.95rem; max-width: 100%; }
+    .hero-btns { flex-direction: column; gap: 0.75rem; }
+    .hero-btns .btn { text-align: center; width: 100%; max-width: 280px; }
     .inv-cta { flex-direction: column; align-items: flex-start; }
+    .inv-intro { font-size: 0.92rem; }
+    .book-card { flex-direction: column; }
+    .book-cover { width: 80px; }
   }
 </style>
 </head>
