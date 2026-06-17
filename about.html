@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Sly Buford</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,700;0,900;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .bio-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 5rem; align-items: start; }
+  .bio-img-box { width: 100%; aspect-ratio: 3/4; background: var(--gray-100); border-radius: 2px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; }
+  .bio-img-box span { font-family: Arial, sans-serif; font-size: 0.7rem; color: var(--gray-400); letter-spacing: 0.1em; }
+  .bio-body { font-size: 1rem; line-height: 1.85; color: var(--gray-600); margin-bottom: 1.35rem; font-family: Arial, sans-serif; }
+  .bio-actions { display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap; }
+
+  .headshots-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 2.5rem; }
+  .headshot-card { text-align: center; }
+  .headshot-box { width: 100%; aspect-ratio: 3/4; background: var(--gray-100); border-radius: 2px; display: flex; align-items: center; justify-content: center; margin-bottom: 0.85rem; }
+  .headshot-box span { font-family: Arial, sans-serif; font-size: 0.7rem; color: var(--gray-400); letter-spacing: 0.1em; }
+  .dl-link { display: inline-flex; align-items: center; gap: 6px; font-family: Arial, sans-serif; font-size: 0.68rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--green); }
+  .dl-link::before { content: '↓'; }
+
+  .charity-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; margin-top: 2.5rem; }
+  .charity-card { border: 1px solid var(--gray-200); border-radius: 2px; padding: 2rem; text-align: center; transition: border-color 0.2s; }
+  .charity-card:hover { border-color: var(--green); }
+  .charity-logo { height: 60px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+  .charity-logo span { font-family: Arial, sans-serif; font-size: 0.7rem; color: var(--gray-400); letter-spacing: 0.1em; text-transform: uppercase; }
+  .charity-name { font-family: Arial, sans-serif; font-size: 0.83rem; color: var(--gray-600); }
+
+  @media (max-width: 900px) {
+    .bio-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .headshots-grid { grid-template-columns: repeat(2,1fr); }
+    .charity-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="page-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="inner">
+      <div class="slabel">About</div>
+      <h1>Sly <em>Buford</em></h1>
+      <p>Investor, author, and entrepreneur. Chairman of Tenth Street Group. Buyer of small businesses.</p>
+    </div>
+  </div>
+
+  <!-- BIO -->
+  <div class="section">
+    <div class="inner">
+      <div class="bio-grid">
+        <div>
+          <div class="bio-img-box"><span>Photo</span></div>
+          <div class="bio-actions">
+            <a href="#" class="btn btn-green btn-sm">Download One-Sheet</a>
+          </div>
+        </div>
+        <div>
+          <div class="slabel">Biography</div>
+          <h2 class="section-title">An American <em>Investor</em> That Buys &amp; Invests in Small Businesses</h2>
+          <p class="bio-body">Sly Buford is an investor, author and entrepreneur and serves as the Chairman of <strong>Tenth Street Group</strong>, a private investment firm that buys and invests in small businesses, the economic engine of America. Sly has positioned himself as one of the leading voices and minds on business, finance and investing.</p>
+          <p class="bio-body">Known as "Sly," he is described as one of the most forward thinkers in the world of small business investing. He acutely recognizes trends and patterns early to help others understand how shifts in the economy impact the realities of small businesses today. Sly's approach sits at the intersection of business and investing. He keenly understands how to bring small investor relevance to the forefront. He is a prolific small cap private equity investor with investments across multiple sectors including manufacturing, paper and packaging, distribution and services.</p>
+          <p class="bio-body">Sly grew up in Lakeland, FL. After receiving a scholarship to play football in 2007, Sly packed up and moved to Montana, before transferring to Nicholls State University in Thibodaux, LA. His passion for investing didn't come until after college — after spending time as a high school football coach and substitute teacher, he started a small training business. At his gym, he met some of the most successful people in business, finance, and investing — private equity managers, hedge fund managers, real estate investors — and the rest is history.</p>
+          <p class="bio-body">These relationships helped birth Buford Properties, which flipped single family homes, followed by Elite Capital Partners — a small cap commercial real estate investment firm that guided $50M in small multifamily acquisitions. Taking those lessons, he now runs <strong>Tenth Street Group</strong>, where he helps accredited investors access cash-flowing small business investments in essential U.S. companies.</p>
+          <p class="bio-body">Sly is a bestselling author of <em>The Hidden Upside: Unlocking Wealth in Small Business Investing</em> and is currently writing his second book, <em>Fund Manager Blueprint</em>. The story is not over yet. Stay tuned for more.</p>
+          <div class="bio-actions">
+            <a href="invest.html" class="btn btn-green">Partner With Me</a>
+            <a href="contact.html" class="btn btn-outline-dark">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADSHOTS -->
+  <div class="section section-gray">
+    <div class="inner">
+      <div class="slabel">Media Kit</div>
+      <h2 class="section-title">Headshots</h2>
+      <div class="headshots-grid">
+        <div class="headshot-card">
+          <div class="headshot-box"><span>Headshot 1</span></div>
+          <a href="#" class="dl-link">Download</a>
+        </div>
+        <div class="headshot-card">
+          <div class="headshot-box"><span>Headshot 2</span></div>
+          <a href="#" class="dl-link">Download</a>
+        </div>
+        <div class="headshot-card">
+          <div class="headshot-box"><span>Headshot 3</span></div>
+          <a href="#" class="dl-link">Download</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHARITABLE -->
+  <div class="section">
+    <div class="inner">
+      <div class="slabel">Community</div>
+      <h2 class="section-title">Charitable <em>Involvement</em></h2>
+      <div class="charity-grid">
+        <div class="charity-card">
+          <div class="charity-logo"><span>Boys &amp; Girls Clubs of America</span></div>
+          <div class="charity-name">Boys &amp; Girls Clubs of America</div>
+        </div>
+        <div class="charity-card">
+          <div class="charity-logo"><span>Boca Helping Hands</span></div>
+          <div class="charity-name">Boca Helping Hands</div>
+        </div>
+        <div class="charity-card">
+          <div class="charity-logo"><span>Junior Achievement</span></div>
+          <div class="charity-name">Junior Achievement</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<script src="components.js"></script>
+</body>
+</html>

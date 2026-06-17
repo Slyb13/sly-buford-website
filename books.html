@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Books — Sly Buford</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,700;0,900;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .book-feature { display: grid; grid-template-columns: 340px 1fr; gap: 5rem; align-items: start; padding: 5rem 0; border-bottom: 1px solid var(--gray-200); }
+  .book-feature:last-child { border-bottom: none; }
+  .book-cover-lg { width: 100%; aspect-ratio: 2/3; border-radius: 2px; display: flex; align-items: center; justify-content: center; padding: 2rem; text-align: center; }
+  .bc-black { background: var(--black); }
+  .bc-charcoal { background: #111; border: 1px solid #2a2a2a; }
+  .book-cover-lg span { font-family: Arial, sans-serif; font-size: 0.65rem; color: var(--green-light); opacity: 0.6; letter-spacing: 0.12em; text-transform: uppercase; line-height: 2; }
+  .bc-charcoal span { color: rgba(255,255,255,0.18); }
+  .book-meta { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
+  .bmeta-tag { padding: 0.22rem 0.7rem; border-radius: 2px; font-family: Arial, sans-serif; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; }
+  .tag-gold { background: #FFF8DC; color: #7A6200; }
+  .tag-green { background: rgba(46,125,50,0.1); color: var(--green-dark); }
+  .tag-gray { background: var(--gray-100); color: var(--gray-600); }
+  .book-feature h2 { font-size: clamp(1.5rem, 2.5vw, 2.2rem); line-height: 1.2; font-weight: 400; margin-bottom: 1.1rem; }
+  .book-feature p { font-family: Arial, sans-serif; font-size: 0.93rem; line-height: 1.8; color: var(--gray-600); margin-bottom: 1rem; }
+  .book-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+  .what-inside { margin-top: 2.5rem; }
+  .what-inside h3 { font-size: 0.73rem; font-family: Arial, sans-serif; letter-spacing: 0.18em; text-transform: uppercase; color: var(--green); margin-bottom: 1rem; }
+  .inside-list { display: flex; flex-direction: column; gap: 0.65rem; }
+  .inside-item { display: flex; gap: 10px; font-family: Arial, sans-serif; font-size: 0.83rem; color: var(--gray-600); line-height: 1.5; }
+  .inside-dot { width: 5px; height: 5px; background: var(--green); border-radius: 50%; margin-top: 7px; flex-shrink: 0; }
+  .waitlist-box { background: var(--gray-100); border-radius: 2px; padding: 2rem; margin-top: 2.5rem; }
+  .waitlist-box h3 { font-size: 1rem; font-weight: 400; margin-bottom: 0.5rem; }
+  .waitlist-box p { font-family: Arial, sans-serif; font-size: 0.83rem; color: var(--gray-600); margin-bottom: 1.25rem; line-height: 1.6; }
+  .waitlist-form { display: flex; gap: 0; border: 1px solid var(--gray-200); border-radius: 2px; overflow: hidden; }
+  .waitlist-form input { flex: 1; padding: 0.78rem 1rem; border: none; font-family: Arial, sans-serif; font-size: 0.88rem; outline: none; background: var(--white); }
+  .waitlist-form button { padding: 0.78rem 1.25rem; background: var(--green); color: var(--white); border: none; cursor: pointer; font-family: Arial, sans-serif; font-size: 0.68rem; letter-spacing: 0.13em; text-transform: uppercase; white-space: nowrap; transition: background 0.2s; }
+  .waitlist-form button:hover { background: var(--green-light); }
+  @media (max-width: 900px) {
+    .book-feature { grid-template-columns: 1fr; gap: 2.5rem; }
+    .book-cover-lg { max-width: 260px; }
+  }
+</style>
+</head>
+<body>
+<div class="page-content">
+
+  <div class="page-hero">
+    <div class="inner">
+      <div class="slabel">Books</div>
+      <h1>Written for <em>Serious Investors</em></h1>
+      <p>Two books on small business investing, capital raising, and building wealth through value investing in private markets.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="inner">
+
+      <!-- BOOK 1 -->
+      <div class="book-feature">
+        <div>
+          <div class="book-cover-lg bc-black"><span>The Hidden Upside<br>Unlocking Wealth in Small Business Investing<br><br>— Sly Buford —</span></div>
+        </div>
+        <div>
+          <div class="book-meta">
+            <span class="bmeta-tag tag-gold">Bestseller</span>
+            <span class="bmeta-tag tag-gray">Available Now</span>
+          </div>
+          <div class="slabel">Book One</div>
+          <h2>The Hidden Upside: Unlocking Wealth in Small Business Investing</h2>
+          <p>Small businesses are the foundation of the American economy — and the most overlooked asset class in the investment world. In <em>The Hidden Upside</em>, investor and entrepreneur Sly Buford reveals why acquiring and investing in small businesses can offer superior returns, greater control, and a direct impact on real people and communities.</p>
+          <p>This book is about the opportunity that exists in investing in small businesses. It covers the $10 trillion dollar opportunity of retiring Baby Boomers, how they own a majority of small businesses in America, how small businesses are the economic cornerstone of America, and a host of other topics written for accredited investors ready to explore a new asset class.</p>
+          <div class="what-inside">
+            <h3>Inside the Book</h3>
+            <div class="inside-list">
+              <div class="inside-item"><div class="inside-dot"></div><div>Why small businesses are the most overlooked asset class for accredited investors</div></div>
+              <div class="inside-item"><div class="inside-dot"></div><div>The $10 trillion Baby Boomer business transfer opportunity</div></div>
+              <div class="inside-item"><div class="inside-dot"></div><div>How to evaluate and acquire small businesses using value investing principles</div></div>
+              <div class="inside-item"><div class="inside-dot"></div><div>Why essential service businesses outperform during economic downturns</div></div>
+              <div class="inside-item"><div class="inside-dot"></div><div>How to think like an operator-investor, not just a passive capital allocator</div></div>
+            </div>
+          </div>
+          <div class="book-actions">
+            <a href="#" class="btn btn-green">Buy on Amazon</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOOK 2 -->
+      <div class="book-feature">
+        <div>
+          <div class="book-cover-lg bc-charcoal"><span>Fund Manager Blueprint<br>How to Raise Capital from Your Network &amp; Invest in Private Deals<br><br>— Sly Buford —<br><br>Coming Soon</span></div>
+        </div>
+        <div>
+          <div class="book-meta">
+            <span class="bmeta-tag tag-green">In Progress</span>
+            <span class="bmeta-tag tag-gray">Coming Soon</span>
+          </div>
+          <div class="slabel">Book Two</div>
+          <h2>Fund Manager Blueprint: How to Raise Capital from Your Network &amp; Invest in Private Deals</h2>
+          <p>The step-by-step playbook for entrepreneurs, investors, and business operators who are ready to make the leap from individual investor to fund manager — raising capital from their trusted network and deploying it into private business acquisitions.</p>
+          <p>This book walks you through everything from structuring your fund and crafting your investor pitch, to finding deals, doing due diligence, and managing investor relationships. Written from the frontlines of real deal-making, this is the blueprint Sly wishes he had when he started.</p>
+          <div class="what-inside">
+            <h3>What You'll Learn</h3>
+            <div class="inside-list">
+              <div class="inside-item"><div class="inside-dot"></div><div>How to structure a fund and legally raise capital from accredited investors in your network</div></div>
+              <div class="inside-item"><div class="inside-dot"></div><div>Crafting a compelling investor pitch that converts conversations into committed capital</div></div>
+              <div class="inside-item"><div class="inside-dot"></div><div>How to source, evaluate, and close private business acquisition deals</div></div>
+              <div class="inside-item"><div class="inside-dot"></div><div>Managing investor relationships and communicating performance</div></div>
+              <div class="inside-item"><div class="inside-dot"></div><div>Building your reputation as a fund manager through thought leadership and content</div></div>
+            </div>
+          </div>
+          <div class="waitlist-box">
+            <h3>Join the Waitlist</h3>
+            <p>Be the first to know when Fund Manager Blueprint drops. Enter your email below.</p>
+            <div class="waitlist-form">
+              <input type="email" placeholder="Your email address">
+              <button>Notify Me</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<script src="components.js"></script>
+</body>
+</html>

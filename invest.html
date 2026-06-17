@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invest — Sly Buford</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,700;0,900;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .invest-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; margin-top: 3.5rem; }
+  .invest-why { display: flex; flex-direction: column; gap: 1.75rem; margin-top: 2rem; }
+  .why-item { display: flex; gap: 1.25rem; align-items: flex-start; }
+  .why-num { font-size: 2rem; font-weight: 400; color: rgba(255,255,255,0.12); line-height: 1; flex-shrink: 0; width: 2.5rem; }
+  .why-text h3 { font-size: 1rem; font-weight: 400; color: var(--white); margin-bottom: 0.4rem; }
+  .why-text p { font-family: Arial, sans-serif; font-size: 0.83rem; line-height: 1.65; color: rgba(255,255,255,0.45); }
+  .form-card { background: var(--white); border-radius: 2px; padding: 2.5rem; }
+  .form-card h3 { font-size: 1.35rem; font-weight: 400; margin-bottom: 0.5rem; color: var(--black); }
+  .form-card p { font-family: Arial, sans-serif; font-size: 0.85rem; color: var(--gray-600); margin-bottom: 2rem; line-height: 1.6; }
+  .form-submit { width: 100%; padding: 0.95rem; background: var(--green); color: var(--white); border: none; cursor: pointer; font-family: Arial, sans-serif; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; border-radius: 2px; transition: background 0.2s; margin-top: 0.5rem; }
+  .form-submit:hover { background: var(--green-light); }
+  @media (max-width: 900px) {
+    .invest-grid { grid-template-columns: 1fr; gap: 3rem; }
+  }
+</style>
+</head>
+<body>
+<div class="page-content">
+
+  <div class="page-hero">
+    <div class="inner">
+      <div class="slabel">Invest</div>
+      <h1>Looking to Be an <em>Investor?</em></h1>
+      <p>Interested in becoming an investor in one of our next opportunities? Fill out some info and I will be in touch shortly. I look forward to our conversation.</p>
+    </div>
+  </div>
+
+  <div class="section section-dark">
+    <div class="inner">
+      <div class="stats-row">
+        <div class="sblock"><div class="big">$1<span>B</span></div><div class="tag">Target AUM</div></div>
+        <div class="sblock"><div class="big">$500<span>M</span></div><div class="tag">Target Capital Raised</div></div>
+        <div class="sblock"><div class="big">1,000<span>+</span></div><div class="tag">Target Employees</div></div>
+      </div>
+      <div class="invest-grid">
+        <div>
+          <div class="slabel slabel-light">Why Invest With Sly</div>
+          <h2 class="section-title light-title">Real Businesses.<br><em>Real Returns.</em></h2>
+          <div class="invest-why">
+            <div class="why-item">
+              <div class="why-num">01</div>
+              <div class="why-text">
+                <h3>Cash-Flowing Assets</h3>
+                <p>We focus on essential businesses with proven cash flows — not speculative growth plays. Steady, predictable returns anchored in real operations.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-num">02</div>
+              <div class="why-text">
+                <h3>Value Investing Principles</h3>
+                <p>Modeled on Buffett and Munger's approach — buying good businesses at fair prices, holding long-term, and letting compounding do its work.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-num">03</div>
+              <div class="why-text">
+                <h3>Accredited Investors Only</h3>
+                <p>We work exclusively with accredited investors to ensure alignment of risk tolerance, capital capacity, and long-term investment horizon.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-num">04</div>
+              <div class="why-text">
+                <h3>Essential U.S. Industries</h3>
+                <p>Manufacturing, distribution, services, and infrastructure — the backbone of the American economy and the most resilient sectors during downturns.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="form-card">
+            <h3>Let's Connect</h3>
+            <p>Fill out the form below and Sly will be in touch shortly to discuss investment opportunities.</p>
+            <div class="form-row">
+              <div class="form-group"><label>First Name</label><input type="text" placeholder="John"></div>
+              <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+            </div>
+            <div class="form-group"><label>Email</label><input type="email" placeholder="john@email.com"></div>
+            <div class="form-group"><label>Phone</label><input type="tel" placeholder="+1 (000) 000-0000"></div>
+            <div class="form-group">
+              <label>Are You Accredited?</label>
+              <select>
+                <option value="">Select an option</option>
+                <option>Yes — I am an accredited investor</option>
+                <option>No — I am not yet accredited</option>
+                <option>Not sure</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Investment Range</label>
+              <select>
+                <option value="">Select a range</option>
+                <option>$25,000 – $50,000</option>
+                <option>$50,000 – $100,000</option>
+                <option>$100,000 – $250,000</option>
+                <option>$250,000 – $500,000</option>
+                <option>$500,000+</option>
+              </select>
+            </div>
+            <div class="form-group"><label>Message</label><textarea placeholder="Tell me a bit about your investment goals..."></textarea></div>
+            <button class="form-submit">Send Message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<script src="components.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Company — Sly Buford</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,700;0,900;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .company-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 4rem; }
+  .company-desc { font-family: Arial, sans-serif; font-size: 1rem; line-height: 1.8; color: var(--gray-600); margin-bottom: 1.25rem; }
+  .opcos-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.5rem; margin-top: 2.5rem; }
+  .opco-card { border: 1px solid var(--gray-200); border-radius: 2px; padding: 2rem; transition: border-color 0.2s; }
+  .opco-card:hover { border-color: var(--green); }
+  .opco-tag { font-family: Arial, sans-serif; font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--green); margin-bottom: 0.5rem; }
+  .opco-name { font-size: 1.05rem; font-weight: 400; margin-bottom: 0.65rem; }
+  .opco-desc { font-family: Arial, sans-serif; font-size: 0.82rem; line-height: 1.65; color: var(--gray-600); }
+  .company-img-box { width: 100%; aspect-ratio: 4/3; background: var(--gray-100); border-radius: 2px; display: flex; align-items: center; justify-content: center; }
+  .company-img-box span { font-family: Arial, sans-serif; font-size: 0.7rem; color: var(--gray-400); letter-spacing: 0.1em; }
+  .thesis-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 2.5rem; }
+  .thesis-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.09); border-radius: 2px; padding: 2rem; }
+  .thesis-num { font-size: 2.5rem; font-weight: 400; color: rgba(255,255,255,0.1); line-height: 1; margin-bottom: 0.75rem; }
+  .thesis-title { font-size: 0.95rem; color: var(--white); margin-bottom: 0.6rem; font-weight: 400; }
+  .thesis-body { font-family: Arial, sans-serif; font-size: 0.8rem; line-height: 1.65; color: rgba(255,255,255,0.45); }
+  @media (max-width: 900px) {
+    .company-intro { grid-template-columns: 1fr; gap: 2.5rem; }
+    .opcos-grid { grid-template-columns: 1fr; }
+    .thesis-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="page-content">
+
+  <div class="page-hero">
+    <div class="inner">
+      <div class="slabel">Company</div>
+      <h1>Tenth Street <em>Group</em></h1>
+      <p>A private investment firm that buys, builds, and invests in small businesses — the economic engine of America.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="inner">
+      <div class="company-intro">
+        <div>
+          <div class="slabel">About the Firm</div>
+          <h2 class="section-title">Built to <em>Acquire</em> &amp; Operate</h2>
+          <p class="company-desc">Tenth Street Group is a holding company headquartered in Boca Raton, FL, that acquires and operates essential U.S. small and medium-size businesses. We focus on businesses in manufacturing, distribution, services, and infrastructure — industries that form the backbone of the American economy.</p>
+          <p class="company-desc">We apply value investing principles — buy good businesses at fair prices, operate them well, hold long-term — to the small business market. Tenth Street Group includes multiple operating companies and invests on behalf of accredited investors seeking cash-flowing, real-asset returns.</p>
+          <a href="invest.html" class="btn btn-green" style="margin-top:1rem;">Partner With Us</a>
+        </div>
+        <div>
+          <div class="company-img-box"><span>Company photo / headquarters</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section-gray">
+    <div class="inner">
+      <div class="slabel">Portfolio</div>
+      <h2 class="section-title">Operating <em>Companies</em></h2>
+      <div class="opcos-grid">
+        <div class="opco-card">
+          <div class="opco-tag">Manufacturing</div>
+          <div class="opco-name">Tenth Street Metals</div>
+          <p class="opco-desc">Metal fabrication and distribution operations serving industrial and commercial clients across the U.S.</p>
+        </div>
+        <div class="opco-card">
+          <div class="opco-tag">Construction &amp; Services</div>
+          <div class="opco-name">Tenth Street Building Services</div>
+          <p class="opco-desc">Commercial building services, facilities management, and maintenance operations.</p>
+        </div>
+        <div class="opco-card">
+          <div class="opco-tag">Infrastructure</div>
+          <div class="opco-name">Tenth Street Utility &amp; Infrastructure</div>
+          <p class="opco-desc">Utility infrastructure services supporting essential systems across communities.</p>
+        </div>
+        <div class="opco-card">
+          <div class="opco-tag">Trades</div>
+          <div class="opco-name">Tenth Street Plumbing &amp; Refrigeration</div>
+          <p class="opco-desc">Commercial plumbing and refrigeration services for businesses and facilities.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section-dark">
+    <div class="inner">
+      <div class="slabel slabel-light">Investment Thesis</div>
+      <h2 class="section-title light-title">How We <em>Think</em> About Investing</h2>
+      <div class="thesis-grid">
+        <div class="thesis-card">
+          <div class="thesis-num">01</div>
+          <div class="thesis-title">Essential Businesses Only</div>
+          <p class="thesis-body">We target manufacturing, industrial, and essential service companies — businesses people need regardless of economic cycles.</p>
+        </div>
+        <div class="thesis-card">
+          <div class="thesis-num">02</div>
+          <div class="thesis-title">Value-Driven Acquisitions</div>
+          <p class="thesis-body">We buy at fair prices based on fundamentals — cash flow, margins, management, and moat — not hype or market momentum.</p>
+        </div>
+        <div class="thesis-card">
+          <div class="thesis-num">03</div>
+          <div class="thesis-title">Baby Boomer Opportunity</div>
+          <p class="thesis-body">Millions of Boomer-owned businesses are transferring ownership. We see a once-in-a-generation opportunity to step in and continue their legacy.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<script src="components.js"></script>
+</body>
+</html>

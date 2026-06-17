@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media — Sly Buford</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,700;0,900;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .media-tabs { display: flex; gap: 0; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 3.5rem; }
+  .mtab { padding: 1rem 2rem; font-family: Arial, sans-serif; font-size: 0.75rem; letter-spacing: 0.13em; text-transform: uppercase; color: rgba(255,255,255,0.4); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color 0.2s, border-color 0.2s; }
+  .mtab.active { color: var(--white); border-bottom-color: var(--green-light); }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  /* PRESS */
+  .press-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 2rem; }
+  .pcard { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.09); border-radius: 2px; overflow: hidden; transition: border-color 0.2s; }
+  .pcard:hover { border-color: rgba(255,255,255,0.22); }
+  .pcard-img { width: 100%; aspect-ratio: 16/9; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; }
+  .pcard-img span { font-family: Arial, sans-serif; font-size: 0.65rem; color: rgba(255,255,255,0.15); letter-spacing: 0.1em; text-transform: uppercase; }
+  .pcard-body { padding: 1.75rem; }
+  .ppub { font-family: Arial, sans-serif; font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--green-light); margin-bottom: 0.65rem; }
+  .phead { font-size: 1rem; line-height: 1.4; color: var(--white); margin-bottom: 0.65rem; font-weight: 400; }
+  .pexcerpt { font-family: Arial, sans-serif; font-size: 0.8rem; line-height: 1.62; color: rgba(255,255,255,0.42); margin-bottom: 1.25rem; }
+  .pread { font-family: Arial, sans-serif; font-size: 0.68rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--green-light); display: flex; align-items: center; gap: 6px; transition: gap 0.2s; }
+  .pread::after { content: '→'; }
+  .pcard:hover .pread { gap: 10px; }
+
+  /* MEDIA KIT */
+  .kit-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; }
+  .bio-block { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.09); border-radius: 2px; padding: 2rem; margin-bottom: 2rem; }
+  .bio-block h3 { font-size: 0.85rem; font-weight: 400; color: var(--white); margin-bottom: 1rem; }
+  .bio-block p { font-family: Arial, sans-serif; font-size: 0.82rem; line-height: 1.7; color: rgba(255,255,255,0.5); }
+  .hs-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; margin-top: 1.5rem; }
+  .hs-box { aspect-ratio: 3/4; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 2px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; transition: border-color 0.2s; cursor: pointer; }
+  .hs-box:hover { border-color: var(--green-light); }
+  .hs-box span { font-family: Arial, sans-serif; font-size: 0.62rem; color: rgba(255,255,255,0.25); letter-spacing: 0.1em; text-transform: uppercase; }
+  .hs-dl { font-family: Arial, sans-serif; font-size: 0.62rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--green-light); }
+  .form-card-dark { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.09); border-radius: 2px; padding: 2.5rem; }
+  .form-card-dark h3 { font-size: 1.35rem; font-weight: 400; color: var(--white); margin-bottom: 0.5rem; }
+  .form-card-dark p { font-family: Arial, sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 2rem; line-height: 1.6; }
+  .form-card-dark .form-group label { color: rgba(255,255,255,0.55); }
+  .form-card-dark .form-group input,
+  .form-card-dark .form-group select,
+  .form-card-dark .form-group textarea { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12); color: var(--white); }
+  .form-card-dark .form-group input::placeholder,
+  .form-card-dark .form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
+  .form-submit { width: 100%; padding: 0.95rem; background: var(--green); color: var(--white); border: none; cursor: pointer; font-family: Arial, sans-serif; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; border-radius: 2px; transition: background 0.2s; margin-top: 0.5rem; }
+  .form-submit:hover { background: var(--green-light); }
+
+  @media (max-width: 900px) {
+    .press-grid { grid-template-columns: 1fr; }
+    .kit-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .hs-grid { grid-template-columns: repeat(2,1fr); }
+  }
+</style>
+</head>
+<body>
+<div class="page-content">
+
+  <div class="page-hero">
+    <div class="inner">
+      <div class="slabel">Media</div>
+      <h1>Press &amp; <em>Media Kit</em></h1>
+      <p>For all interviews, media opportunities, and press-related inquiries. Headshots, bio, and booking information available below.</p>
+    </div>
+  </div>
+
+  <div class="section section-dark">
+    <div class="inner">
+      <div class="media-tabs">
+        <div class="mtab active" onclick="showTab('press')">Press</div>
+        <div class="mtab" onclick="showTab('kit')">Media Kit</div>
+      </div>
+
+      <!-- PRESS TAB -->
+      <div class="tab-panel active" id="tab-press">
+        <div class="press-grid">
+          <div class="pcard">
+            <div class="pcard-img"><span>Article image</span></div>
+            <div class="pcard-body">
+              <div class="ppub">South Florida Business Journal</div>
+              <div class="phead">Thinking of buying or selling a business? Here are some tips from experts.</div>
+              <p class="pexcerpt">Founder of Tenth Street Group, Sly Buford shares his tips on buying and selling businesses, why he's bullish on acquiring companies and how others could benefit from acquisition to grow and scale their company.</p>
+              <a href="#" class="pread">Read Article</a>
+            </div>
+          </div>
+          <div class="pcard">
+            <div class="pcard-img"><span>Article image</span></div>
+            <div class="pcard-body">
+              <div class="ppub">Tampa Bay Business Brokers</div>
+              <div class="phead">Selling a business not as easy as it sounds</div>
+              <p class="pexcerpt">High interest rates and demographics are leading to what looks to be a surge in private businesses being sold in coming years. The challenge for entrepreneurs: finding a near-perfect buyer.</p>
+              <a href="#" class="pread">Read Article</a>
+            </div>
+          </div>
+          <div class="pcard">
+            <div class="pcard-img"><span>Article image</span></div>
+            <div class="pcard-body">
+              <div class="ppub">South Florida Business Journal</div>
+              <div class="phead">Small Businesses a Hot Commodity</div>
+              <p class="pexcerpt">Founder and Chairman of Tenth Street Group, Sly Buford shares his thoughts on why now is a great time for Tenth Street Group to continue its acquisition run of small to medium-size businesses.</p>
+              <a href="#" class="pread">Read Article</a>
+            </div>
+          </div>
+          <div class="pcard">
+            <div class="pcard-img"><span>Article image</span></div>
+            <div class="pcard-body">
+              <div class="ppub">Lakeland Ledger</div>
+              <div class="phead">Lakeland native, private equity firm founder to invest $1 million in hometown businesses</div>
+              <p class="pexcerpt">Sylvester "Sly" Buford, 34, left for college in 2007 and after graduation worked as a personal trainer in South Florida, before becoming an investor.</p>
+              <a href="#" class="pread">Read Article</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MEDIA KIT TAB -->
+      <div class="tab-panel" id="tab-kit">
+        <div class="kit-grid">
+          <div>
+            <div class="slabel slabel-light">Biography</div>
+            <h2 class="section-title light-title" style="font-size:1.6rem; margin-bottom:1.5rem;">Official <em>Bio</em></h2>
+            <div class="bio-block">
+              <h3>Short Bio (75 words)</h3>
+              <p>Sly Buford is an investor, author, and entrepreneur, and the Chairman of Tenth Street Group — a private investment firm that buys and invests in small businesses, the economic engine of America. He is the author of <em>The Hidden Upside: Unlocking Wealth in Small Business Investing</em> and applies Buffett and Munger value investing principles to small business acquisitions. Based in Boca Raton, FL.</p>
+            </div>
+            <div class="bio-block">
+              <h3>Long Bio</h3>
+              <p>Sly Buford is an investor, author and entrepreneur and serves as the Chairman of Tenth Street Group, a private investment firm that buys and invests in small businesses, the economic engine of America. Sly has positioned himself as one of the leading voices and minds on business, finance and investing. He is a prolific small cap private equity investor with investments across manufacturing, paper and packaging, distribution and services, and is a bestselling author of <em>The Hidden Upside: Unlocking Wealth in Small Business Investing</em>.</p>
+            </div>
+            <a href="#" class="btn btn-outline-white btn-sm">Download One-Sheet PDF</a>
+
+            <div style="margin-top:3rem;">
+              <div class="slabel slabel-light">Headshots</div>
+              <h2 class="section-title light-title" style="font-size:1.6rem; margin-bottom:1.5rem;">Download <em>Photos</em></h2>
+              <div class="hs-grid">
+                <div class="hs-box"><span>Photo 1</span><div class="hs-dl">↓ Download</div></div>
+                <div class="hs-box"><span>Photo 2</span><div class="hs-dl">↓ Download</div></div>
+                <div class="hs-box"><span>Photo 3</span><div class="hs-dl">↓ Download</div></div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="slabel slabel-light">Press Inquiries</div>
+            <h2 class="section-title light-title" style="font-size:1.6rem; margin-bottom:1.5rem;">Media &amp; Press <em>Inquiries</em></h2>
+            <div class="form-card-dark">
+              <h3>Get in Touch</h3>
+              <p>For all interviews, media opportunities, and anything else press-related.</p>
+              <div class="form-row">
+                <div class="form-group"><label>First Name</label><input type="text" placeholder="First Name"></div>
+                <div class="form-group"><label>Last Name</label><input type="text" placeholder="Last Name"></div>
+              </div>
+              <div class="form-group"><label>Email</label><input type="email" placeholder="your@email.com"></div>
+              <div class="form-group"><label>Phone</label><input type="tel" placeholder="+1 (000) 000-0000"></div>
+              <div class="form-group"><label>Message</label><textarea placeholder="Tell us about your media opportunity..."></textarea></div>
+              <button class="form-submit">Submit Inquiry</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<script src="components.js"></script>
+<script>
+  function showTab(name) {
+    document.querySelectorAll('.mtab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('tab-' + name).classList.add('active');
+    event.target.classList.add('active');
+  }
+</script>
+</body>
+</html>
