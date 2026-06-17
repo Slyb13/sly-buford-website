@@ -37,7 +37,8 @@ function injectNav() {
         border: none;
         cursor: pointer;
         padding: 4px;
-        z-index: 200;
+        z-index: 1000;
+        position: relative;
       }
       .hamburger span {
         display: block;
@@ -57,27 +58,35 @@ function injectNav() {
           display: none;
           position: fixed;
           top: 0; left: 0; right: 0; bottom: 0;
-          background: rgba(10,10,10,0.98);
+          width: 100vw;
+          height: 100vh;
+          background: #0a0a0a;
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          gap: 2rem;
-          z-index: 150;
+          gap: 1.75rem;
+          z-index: 999;
+          overflow-y: auto;
+          padding: 2rem;
         }
         .nav-links.open { display: flex; }
         .nav-links a {
-          font-size: 1.1rem !important;
+          font-size: 1.2rem !important;
           letter-spacing: 0.15em;
+          text-transform: uppercase;
           color: rgba(255,255,255,0.8) !important;
+          font-weight: 500;
         }
-        .nav-links a:hover { color: var(--white) !important; }
+        .nav-links a:hover, .nav-links a.active { color: var(--white) !important; }
+        .nav-links a.active { border-bottom: 1px solid var(--green); padding-bottom: 3px; }
         .nav-links .nav-cta {
-          margin-top: 1rem;
-          padding: 0.85rem 2.5rem !important;
+          margin-top: 0.5rem;
+          padding: 0.9rem 2.5rem !important;
           font-size: 0.85rem !important;
           background: var(--green) !important;
           color: var(--white) !important;
           border-radius: 2px;
+          border-bottom: none !important;
         }
       }
     </style>`;
