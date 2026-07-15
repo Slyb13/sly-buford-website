@@ -19,7 +19,7 @@ function injectNav() {
 
   const navHTML = `
     <nav>
-      <a class="nav-logo" href="/">Sly Buford</a>
+      <a class="nav-logo" href="/"><img src="/logo.png" alt="Sly Buford" style="height:38px;width:auto;display:block;"></a>
       <div class="nav-links" id="nav-links">
         ${links.map(l => `<a href="${l.href}" class="${page === l.id ? 'active' : ''}">${l.label}</a>`).join('')}
         <a href="/invest" class="nav-cta">Partner With Me</a>
