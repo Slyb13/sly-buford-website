@@ -136,10 +136,12 @@
     .books-row { grid-template-columns: 1fr; }
     .press-grid { grid-template-columns: 1fr; }
     .hero-stats {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;
-      margin: 2rem 1.5rem 2rem; padding-top: 1.5rem; max-width: 612px;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem;
+      margin: 1.25rem 1.5rem 1.5rem; padding-top: 1rem; max-width: 612px;
     }
-    .hstat .num { font-size: 1.8rem; }
+    .hstat .num { font-size: 1.5rem; }
+    .hstat .num sup { font-size: 0.8rem; }
+    .hstat .lbl { font-size: 0.6rem; letter-spacing: 0.1em; line-height: 1.35; margin-top: 6px; white-space: normal; }
     .hero-content { padding: 0 1.5rem 0; }
     .hero h1 { font-size: clamp(2.4rem, 9vw, 3.2rem); }
     .hero-sub { font-size: 0.95rem; max-width: 100%; }
