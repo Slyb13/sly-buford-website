@@ -53,14 +53,6 @@
     color: rgba(255,255,255,0.58); max-width: 430px; margin-bottom: 2.75rem;
   }
   .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-  .hero-stats {
-    position: relative; z-index: 2;
-    display: flex; gap: 2.5rem;
-  }
-  .hstat { text-align: left; }
-  .hstat .num { font-size: 2.4rem; font-weight: 900; color: var(--white); line-height: 1; letter-spacing: -0.03em; }
-  .hstat .num sup { font-size: 1rem; color: var(--green-light); }
-  .hstat .lbl { font-family: var(--font-body); font-size: 0.63rem; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-top: 8px; white-space: nowrap; }
 
   /* ABOUT SNIPPET */
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
@@ -116,33 +108,11 @@
   .nl-form button { padding: 0.88rem 1.5rem; background: var(--white); color: var(--green-dark); border: none; cursor: pointer; font-family: var(--font-body); font-size: 0.68rem; letter-spacing: 0.13em; text-transform: uppercase; font-weight: 700; white-space: nowrap; transition: background 0.2s; }
   .nl-form button:hover { background: #e8f5e9; }
 
-  @media (min-width: 1101px) {
-    .hero-stats { position: absolute; right: 3rem; bottom: 3.5rem; gap: 2rem; }
-    .hstat + .hstat { border-left: 1px solid rgba(255,255,255,0.15); padding-left: 2rem; }
-    .hstat .num, .hstat .lbl { text-shadow: 0 2px 12px rgba(0,0,0,0.6); }
-    .hstat .lbl { color: rgba(255,255,255,0.75); }
-    .hstat .num sup { color: var(--white); }
-  }
-  @media (max-width: 1100px) {
-    .hero { flex-direction: column; justify-content: flex-end; align-items: stretch; }
-    .hero-content { padding-bottom: 0; }
-    .hero-stats {
-      margin: 3rem 3rem 3.5rem; padding-top: 1.75rem; max-width: 564px;
-      border-top: 1px solid rgba(255,255,255,0.15);
-    }
-  }
   @media (max-width: 900px) {
     .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     .books-row { grid-template-columns: 1fr; }
     .press-grid { grid-template-columns: 1fr; }
-    .hero-stats {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem;
-      margin: 1.25rem 1.5rem 1.5rem; padding-top: 1rem; max-width: 612px;
-    }
-    .hstat .num { font-size: 1.5rem; }
-    .hstat .num sup { font-size: 0.8rem; }
-    .hstat .lbl { font-size: 0.6rem; letter-spacing: 0.1em; line-height: 1.35; margin-top: 6px; white-space: normal; }
-    .hero-content { padding: 0 1.5rem 0; }
+    .hero-content { padding: 0 1.5rem 2.5rem; }
     .hero h1 { font-size: clamp(2.4rem, 9vw, 3.2rem); }
     .hero-sub { font-size: 0.95rem; max-width: 100%; }
     .hero-btns { flex-direction: column; gap: 0.75rem; }
@@ -169,11 +139,6 @@
         <a href="/invest" class="btn btn-green">Partner With Me</a>
         <a href="/books" class="btn btn-outline-white">Read The Book</a>
       </div>
-    </div>
-    <div class="hero-stats">
-      <div class="hstat"><div class="num">$1<sup>B</sup></div><div class="lbl">Target AUM</div></div>
-      <div class="hstat"><div class="num">$500<sup>M</sup></div><div class="lbl">Capital Target</div></div>
-      <div class="hstat"><div class="num">1K<sup>+</sup></div><div class="lbl">Target Employees</div></div>
     </div>
   </section>
 
